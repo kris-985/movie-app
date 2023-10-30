@@ -1,0 +1,38 @@
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-us-text {
+  flex: 1;
+  padding: 20px;
+}
+.about-us-text span{
+  font-weight: bold;
+}
+.about-us-text h2 {
+  font-weight: bold;
+  color: #80395a;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.about-us-image {
+  flex: 1;
+  text-align: center;
+  object-fit: cover;
+}
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
