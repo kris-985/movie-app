@@ -5,17 +5,17 @@ import { GiFilmProjector } from 'react-icons/gi';
 import { BsFacebook } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr';
 import { BsTwitter } from 'react-icons/bs';
-import {ImYoutube} from 'react-icons/im';
+import { ImYoutube } from 'react-icons/im';
 
 const Footer = () => {
     return (
         <div>
-            <div className='container-navi'>
+            <div className='footer-section'>
                 <div className='left-section'>
                     <ul>
                         <li>
                             <Link to="aboutus" className='left-section-one'>
-                                <li className='left-section-one'>ABOUT US</li>
+                                <li>ABOUT US</li>
                             </Link>
                         </li>
                         <li>
@@ -42,15 +42,11 @@ const Footer = () => {
 
                     <span className='follow-us'><BsTwitter /></span>
 
-                    <span className='follow-us'><ImYoutube/></span>
+                    <span className='follow-us'><ImYoutube /></span>
                 </div>
-
             </div>
-            <footer className='footer'>
-                <p className='footer-one'>&copy;2023 ALL RIGHT RESERVED.</p>
-            </footer>
 
-
+            <p className='footer-one'>&copy;2023 ALL RIGHT RESERVED.</p>
         </div>
     )
 }

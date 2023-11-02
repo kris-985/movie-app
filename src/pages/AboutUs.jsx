@@ -8,21 +8,21 @@ const AboutUs = () => {
     <div className="about-us-container">
       <div className="about-us-content">
         <div className="about-us-text">
-          <h2>Добре дошли в MOVIES APP!</h2>
+          <h2>Welcome to our Movie App!</h2>
           <p>
-            <span>Историята ни:</span> Нашата страст към филмите и убеждението, че всяко киноизкуство заслужава да бъде открито и споделено, доведе до създаването на нашето приложение. Започнахме с идеята да създадем място, където любителите на филмите от всякакви жанрове и култури могат да открият нови филми, да споделят своите преживявания и да се вдъхновяват един от друг.
+            <span>Our Story:</span>Our passion for films and the belief that every cinematic art deserves to be discovered and shared led to the creation of our application. We started with the idea of creating a place where movie enthusiasts of all genres and cultures can discover new films, share their experiences, and be inspired by one another.
             <br/><br/>
-            <span>Екипът ни:</span> Ние сме група от страстни фенове на киното, разработчици и дизайнери, които работят усърдно, за да осигурим най-доброто потребителско изживяване. Нашата разнообразна екипна динамика и културно разнообразие ни вдъхновява да търсим постоянни иновации и подобрения, които да вървят ръка за ръка с нуждите на нашите потребители.
+            <span>Our Team:</span>We are a group of passionate cinema fans, developers, and designers working diligently to provide the best user experience. Our diverse team dynamics and cultural variety inspire us to seek constant innovation and improvements that cater to the needs of our users.
             <br/><br/>
-            <span>Уникални характеристики:</span> Нашето приложение предлага не само огромна колекция от филми, но и персонализирани препоръки, базирани на вашите предпочитания. Допълнително, можете да се включите в общността ни, да споделите свои рецензии, да оценявате филми и да откриете какво гледат други потребители.
+            <span>Unique Features:</span>Our app offers not only an extensive collection of movies but also personalized recommendations based on your preferences. Additionally, you can engage with our community, share your reviews, rate films, and discover what other users are watching.
             <br/><br/>
-            <span>Потребителско изживяване:</span> Ние вярваме, че всяко изживяване с филми е уникално. Следователно, сме се постарали да направим приложението си интуитивно и лесно за използване, за да можете да се насладите на вашите любими филми по начина, по който предпочитате.
+            <span>User Experience:</span>We believe that every movie experience is unique. Therefore, we have made our app intuitive and easy to use so that you can enjoy your favorite films the way you prefer.
             <br/><br/>
-            <span>Бъдещи планове и развитие:</span> Нашата цел е да продължим да подобряваме приложението си, като добавяме нови функции и усъвършенстваме вече съществуващите. Планираме да въведем нови интерактивни функции и разширения нашата филмова общност, за да направим вашият опит с нас още по-вълнуващ.
+            <span>Future Plans and Development:</span>Our goal is to continue enhancing our app by adding new features and improving existing ones. We plan to introduce new interactive functions and expand our film community to make your experience with us even more exciting.
           </p>
         </div>
         <div className="about-us-image">
-          <img src="https://img.freepik.com/premium-vector/cinema-movie-background-popcorn-filmstrip-clapboard-tickets-movie-time-background_41737-248.jpg?w=740" alt="Movies" />
+          <img src="https://img.freepik.com/premium-vector/cinema-movie-background-popcorn-filmstrip-clapboard-tickets-movie-time-background_41737-248.jpg?w=740" alt="Movie" />
         </div>
       </div>
     </div>

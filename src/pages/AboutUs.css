@@ -12,6 +12,7 @@
   margin: 0 auto;
 }
 .about-us-text {
+  font-size: 18px;
   flex: 1;
   padding: 20px;
 }

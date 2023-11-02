@@ -1,11 +1,22 @@
 .container-navi {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    max-height: 100vh;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid darkred;
+}
+
+.footer-section {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-top: 1px solid #eee;
     margin-top: 3rem;
-
 }
 
 .left-section ul {
@@ -52,10 +63,8 @@
     font-size: 23px;
 }
 
-.footer {
+.footer-one {
     background-color: black;
-}
-.footer-one{
     padding: 10px 20px;
     text-align: center;
     font-weight: bold;

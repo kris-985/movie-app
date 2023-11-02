@@ -1,0 +1,46 @@
+.chatSection {
+    text-align: center;
+    /* Други стилове, които искате да приложите на основния контейнер */
+}
+
+.mainTitle {
+    /* Стилове за главния заглавие */
+    color: #80395a;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 1rem;
+
+}
+
+.subTitle {
+    /* Стилове за подзаглавието */
+    font-size: 1.2em;
+    font-weight: bold;
+    /* Други стилове по ваше желание */
+}
+
+.icons {
+    margin-top: 20px;
+    /* Разстояние между заглавието/текста и иконите */
+    display: flex;
+    justify-content: space-around;
+    /* Други стилове по ваше желание */
+}
+
+.icon {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    /* Други стилове за иконите */
+}
+
+.image-container {
+    margin-top: 50px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+}
