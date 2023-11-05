@@ -22,7 +22,7 @@ const NavBar = () => {
            console.log(error); 
         }
     }
-    console.log(user);
+   
 
     return (
         <div>

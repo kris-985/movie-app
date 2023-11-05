@@ -7,7 +7,7 @@ import Movie from './Movie';
 const Home = () => {
   const request = "https://api.themoviedb.org/3/movie/popular?api_key=f9246f47d869b76facb0c10c35451acb&languange=en-US&page=1"
   const [movies, setMovies] = useState([]);
-  console.log(movies);
+  
   useEffect(() => {
     axios.get(request).then((response) => {
       setMovies(response.data.results);
