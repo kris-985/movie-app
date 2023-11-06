@@ -15,6 +15,7 @@ import { AuthContextProvider } from './context/AuthContext';
 function App() {
   return (
     <AuthContextProvider>
+      <div className='router-wrapper'>
     <BrowserRouter>
       <NavBar />
       <Routes>
@@ -28,7 +29,9 @@ function App() {
         <Route path="privacypolicy" element={<PrivacyPolicy />}/>
       </Routes>
       <Footer/>
-    </BrowserRouter>
+     </BrowserRouter>
+    </div>
+
     </AuthContextProvider>
   );
 }

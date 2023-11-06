@@ -9,7 +9,7 @@ import { ImYoutube } from 'react-icons/im';
 
 const Footer = () => {
     return (
-        <div>
+        <div className='footer-wrapper'>
             <div className='footer-section'>
                 <div className='left-section'>
                     <ul>

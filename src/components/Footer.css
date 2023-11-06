@@ -1,13 +1,5 @@
-.container-navi {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    max-height: 100vh;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid darkred;
+.footer-wrapper{
+    padding-top: 20px;
 }
 
 .footer-section {
