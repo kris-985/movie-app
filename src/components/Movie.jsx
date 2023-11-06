@@ -2,17 +2,27 @@ import React, { useState } from 'react';
 import './Home.css';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { UserAuth } from '../context/AuthContext';
+import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 
 
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false)
   const { user } = UserAuth();
-  const saveShow = () => {
+  const movieId = doc(db, 'users', user?.email)
+  const saveShow = async () => {
+
     if (user?.email) {
       setLike(!like)
-
+      await updateDoc(movieId,{
+       savedShows:arrayUnion({
+        id:movie.id,
+        title:movie.title,
+        img:movie.backdrop_path
+       }) 
+      })
     }
-    else { alert('Please a like movie') }
+    else { alert('Please login to like a movie') }
   }
   console.log(like)
   return (
@@ -22,8 +32,8 @@ const Movie = ({ movie }) => {
       <div className='hover-overlay'>
         <div className='single-movie-popularity'>POPULARITY:{movie.popularity}</div>
       </div>
-      <div onClick={saveShow}>{like ? <AiFillHeart /> :
-        <AiOutlineHeart />}</div>
+      <div onClick={saveShow}>{like ? <AiFillHeart  className='heart-icon'/> :
+        <AiOutlineHeart className='heart-icon' />}</div>
       {/* <div className='single-movie-overview'>{movie.overview}</div> */}
     </div>
   )

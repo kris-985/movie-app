@@ -62,6 +62,14 @@
     font-size: 25px;
     font-weight: 200;
   }
+  .heart-icon{
+    color: #a70d2c;
+    font-size: 50px;
+    position: absolute;
+    z-index: 5;
+    top:0;
+    right:0;
+  }
   @media screen and (max-width:1024px){
     .popular-movie-title{
       font-size: 20px;
