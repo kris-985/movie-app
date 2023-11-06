@@ -9,12 +9,12 @@ import { db } from '../firebase';
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false)
   const { user } = UserAuth();
-  const movieId = doc(db, 'users', user?.email)
+  // const movieId = doc(db, 'users', user?.email)
   const saveShow = async () => {
 
     if (user?.email) {
       setLike(!like)
-      await updateDoc(movieId,{
+      await updateDoc(doc(db, 'users', user?.email),{
        savedShows:arrayUnion({
         id:movie.id,
         title:movie.title,
@@ -24,17 +24,15 @@ const Movie = ({ movie }) => {
     }
     else { alert('Please login to like a movie') }
   }
-  console.log(like)
   return (
     <div className='single-movie-container'>
-      <div className='single-movie-title'>{movie.title.toUpperCase()}</div>
+      <div className='single-movie-title'>{movie?.title.toUpperCase()}</div>
       <img className='single-movie-img' src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`} alt=''></img>
       <div className='hover-overlay'>
-        <div className='single-movie-popularity'>POPULARITY:{movie.popularity}</div>
+        <div className='single-movie-popularity'>POPULARITY:{movie?.popularity}</div>
       </div>
       <div onClick={saveShow}>{like ? <AiFillHeart  className='heart-icon'/> :
         <AiOutlineHeart className='heart-icon' />}</div>
-      {/* <div className='single-movie-overview'>{movie.overview}</div> */}
     </div>
   )
 }

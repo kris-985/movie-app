@@ -59,26 +59,26 @@ const NavBar = () => {
 
                     <div>
                         <ul className={click ? 'nav-menu active ' : 'nav-menu'}>
-                            <li className='link'>
+                            <div className='link'>
                                 <Link to="/" className='link-one'>
                                     <li><span><AiFillHome /></span>Home</li>
                                 </Link>
-                            </li>
-                            <li className='link'>
+                            </div>
+                            <div className='link'>
                                 <Link to="aboutus" className='link-one'>
                                     <li><span><BsFillInfoCircleFill /></span>About us</li>
                                 </Link>
-                            </li>
-                            <li className='link'>
+                            </div>
+                            <div className='link'>
                                 <Link to="contacts" className='link-one'>
                                     <li><span><IoMdContact /></span>Contacts</li>
                                 </Link>
-                            </li>
-                            <li className='link'>
+                            </div>
+                            <div className='link'>
                                 <Link to="favourites" className='link-one'>
                                     <li><span><MdFavorite /></span>Favourites</li>
                                 </Link>
-                            </li>
+                            </div>
                         </ul>
                         <div>
                             <div className='hamburger' onClick={handleClick}>

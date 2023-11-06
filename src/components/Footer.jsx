@@ -13,21 +13,21 @@ const Footer = () => {
             <div className='footer-section'>
                 <div className='left-section'>
                     <ul>
-                        <li>
-                            <Link to="aboutus" className='left-section-one'>
-                                <li>ABOUT US</li>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="contacts" className='left-section-one'>
-                                <li>CONTACTS</li>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="privacypolicy" className='left-section-one'>
-                                <li>PRIVACY POLICY</li>
-                            </Link>
-                        </li>
+
+                        <Link to="aboutus" className='left-section-one'>
+                            <li>ABOUT US</li>
+                        </Link>
+
+
+                        <Link to="contacts" className='left-section-one'>
+                            <li>CONTACTS</li>
+                        </Link>
+
+
+                        <Link to="privacypolicy" className='left-section-one'>
+                            <li>PRIVACY POLICY</li>
+                        </Link>
+
                     </ul>
                 </div>
                 <div className='center-section'>
