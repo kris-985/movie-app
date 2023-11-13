@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Login.css';
 import {BsArrowRight} from 'react-icons/bs';
-import { UserAuth } from '../context/AuthContext';
+import { logIn } from './services/auth.services';
 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const {logIn} = UserAuth();
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();

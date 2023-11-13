@@ -10,11 +10,12 @@ import { IoMdContact } from 'react-icons/io';
 import { MdFavorite } from 'react-icons/md';
 import { Link, Outlet } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import { logOut } from './services/auth.services';
 
 const NavBar = () => {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
-    const { user,logOut } = UserAuth();
+    const { user } = UserAuth();
     const handleLogout= async()=>{
         try {
             await logOut();

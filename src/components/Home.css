@@ -1,3 +1,28 @@
+/* Стилизация на секцията */
+.section-with-image {
+  position: relative;
+}
+
+/* Стилизация на снимката */
+.section-with-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Стилизация на текста върху снимката */
+.section-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid floralwhite;
+  text-align: center;
+  color: blue; /* Цвят на текста */
+  font-weight: bold;
+  font-size: 84px; /* Размер на шрифта */
+}
+
 .movies-container {
   max-width: calc(100% - 100px);
   margin: 0 auto;
