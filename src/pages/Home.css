@@ -1,35 +1,34 @@
-/* Стилизация на секцията */
-.section-with-image {
-  position: relative;
-}
-
-/* Стилизация на снимката */
-.section-with-image img {
+.background-section{
+  display: flex;
+  background-image: url("https://wallpaperswide.com/download/black_panther_wakanda_forever_superhero_movie-wallpaper-3840x2160.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* Стилизация на текста върху снимката */
-.section-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid floralwhite;
-  text-align: center;
-  color: blue; /* Цвят на текста */
-  font-weight: bold;
-  font-size: 84px; /* Размер на шрифта */
+.movies-containers{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .movies-container {
   max-width: calc(100% - 100px);
   margin: 0 auto;
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%); 
+
+  @media screen and (max-width: 1024px) {
+    max-width: calc(100% - 10px);
+  }
 }
 
 .popular-movie-title {
-  color:#80395a;
+  color: red;
   display: flex;
   justify-content: center;
   margin: 20px auto;

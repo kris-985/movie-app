@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Home.css';
+import '../pages/Home.css';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { UserAuth } from '../context/AuthContext';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
@@ -9,6 +9,7 @@ import { db } from '../firebase';
 const Movie = ({ movie }) => {
   const [like, setLike] = useState(false)
   const { user } = UserAuth();
+  //TODO
   // const movieId = doc(db, 'users', user?.email)
   const saveShow = async () => {
 
