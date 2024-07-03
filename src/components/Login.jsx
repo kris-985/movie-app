@@ -22,7 +22,7 @@ const Login = () => {
   return (
     <BackgroundSection>
       <LoginForm>
-        <Title>Login</Title>
+        <Title>LOGIN</Title>
         <form onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="email">

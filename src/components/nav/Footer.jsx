@@ -13,17 +13,17 @@ const Footer = () => {
       <FooterSection>
         <LeftSection>
           <ul>
-            <LeftSectionLink to="home">
-              <li>Home</li>
+            <LeftSectionLink to="/">
+              <li>HOME</li>
             </LeftSectionLink>
             <LeftSectionLink to="aboutus">
-              <li>About us</li>
-            </LeftSectionLink>
-            <LeftSectionLink to="movies">
-              <li>Movies</li>
+              <li>ABOUT US</li>
             </LeftSectionLink>
             <LeftSectionLink to="contacts">
-              <li>Contacts</li>
+              <li>CONTACTS</li>
+            </LeftSectionLink>
+            <LeftSectionLink to="favourites">
+              <li>FAVOURITES</li>
             </LeftSectionLink>
           </ul>
         </LeftSection>
@@ -146,4 +146,8 @@ const FooterOne = styled.p`
   font-weight: bold;
   color: #fff;
   font-size: 25px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;

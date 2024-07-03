@@ -1,112 +1,93 @@
-.background-section{
-  display: flex;
-  background-image: url("https://wallpaperswide.com/download/black_panther_wakanda_forever_superhero_movie-wallpaper-3840x2160.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
+
+.movies-containers {
+  flex-grow: 1;
+  overflow-y: auto; 
+  padding: 20px; 
 }
-.movies-containers{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 .movies-container {
-  max-width: calc(100% - 100px);
+  max-width: 100%;
   margin: 0 auto;
-  position: relative;
-  top: 50%; 
-  transform: translateY(-50%); 
-
-  @media screen and (max-width: 1024px) {
-    max-width: calc(100% - 10px);
-  }
-}
-
-.popular-movie-title {
-  color: red;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 20px auto;
 }
 
 .movie-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px;
-  gap: 19px;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-auto-rows: 300px; 
+  gap: 10px;
 }
-.single-movie-container{
-  width: 100%;
-  height: 100%;
+
+.popular-movie-title {
+  color: #80395a;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.single-movie-container {
   position: relative;
-}
-.single-movie-title{
-  width: 100%;
-  height:100%;
-  font-size: 30px;
-  font-weight: bold;
-  position: absolute;
-  color: #a70d2c;
-
+  overflow: hidden; 
 }
 
-.single-movie-img{
+.single-movie-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.hover-overlay{
+
+.hover-overlay {
   width: 100%;
-  height:100%;
-  background-color: rgb(0 0 0/0.6);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right:0;
-  transition: .5s ease;
-
+  top: 0;
+  transition: opacity 0.5s ease;
 }
-.single-movie-container:hover .hover-overlay{
+
+.single-movie-container:hover .hover-overlay {
   opacity: 1;
+}
+
+.single-movie-title,
+.single-movie-popularity,
+.heart-icon {
+  position: absolute;
+  color: #fff;
+  z-index: 5;
+}
+
+.single-movie-title {
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.single-movie-popularity {
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+}
+
+.heart-icon {
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #80395a;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .movie-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 8px;
   }
-  .single-movie-popularity{
-    position: absolute;
-    top:50px;
-    color:#fff;
-    font-size: 25px;
-    font-weight: 200;
+
+  .single-movie-title {
+    font-size: 16px;
   }
-  .heart-icon{
-    color: #a70d2c;
-    font-size: 50px;
-    position: absolute;
-    z-index: 5;
-    top:0;
-    right:0;
-  }
-  @media screen and (max-width:1024px){
-    .popular-movie-title{
-      font-size: 20px;
-    }
-    .movies-container{
-      max-width: calc(100% - 10px);
-    }
-    .movie-container{
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 200px;
-      gap: 8px; 
-    }
-    .single-movie-title{
-      font-size: 17px;
-    }
-  }
+}

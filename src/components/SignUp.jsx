@@ -41,7 +41,7 @@ const SignUp = () => {
   return (
     <div className="background-section">
       <div className="signup-form">
-        <h1>Register</h1>
+        <h1>SIGN UP</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             {valuesInputs(values).map((input) => {
@@ -57,7 +57,7 @@ const SignUp = () => {
           </div>
           {errorMess && <div className="error-message">{errorMess}</div>}
           <button className="btn" type="submit">
-            Register
+            SIGN UP
           </button>
           <div>
             <p className="paragraph">

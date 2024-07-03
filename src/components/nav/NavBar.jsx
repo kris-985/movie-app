@@ -6,7 +6,6 @@ import { GiFilmProjector } from "react-icons/gi";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
-import { SiThemoviedatabase } from "react-icons/si";
 import { MdFavorite } from "react-icons/md";
 import { Link, Outlet } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
@@ -43,7 +42,7 @@ const NavBar = () => {
                 <span>
                   <AiFillHome />
                 </span>
-                Home
+                HOME
               </NavLink>
             </NavItem>
             <NavItem>
@@ -51,15 +50,7 @@ const NavBar = () => {
                 <span>
                   <BsFillInfoCircleFill />
                 </span>
-                About us
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="movies">
-                <span>
-                  <SiThemoviedatabase />
-                </span>
-                Movies
+                ABOUT US
               </NavLink>
             </NavItem>
             <NavItem>
@@ -67,7 +58,7 @@ const NavBar = () => {
                 <span>
                   <IoMdContact />
                 </span>
-                Contacts
+                CONTACTS
               </NavLink>
             </NavItem>
             <NavItem>
@@ -75,7 +66,7 @@ const NavBar = () => {
                 <span>
                   <MdFavorite />
                 </span>
-                Favourites
+                FAVOURITES
               </NavLink>
             </NavItem>
           </NavMenu>
@@ -86,9 +77,6 @@ const NavBar = () => {
         <ButtonGroup>
           {user?.email ? (
             <div>
-              <Link to="account">
-                <Button>Account</Button>
-              </Link>
               <Link to="logout">
                 <Button onClick={handleLogout}>Logout</Button>
               </Link>
@@ -118,7 +106,7 @@ const NavbarContainer = styled.div`
   top: 0;
   left: 0;
   background-color: white;
-  border-bottom: 1px solid #eee;
+  border-bottom: 5px solid #80395a;
 `;
 
 const Container = styled.div`
@@ -155,6 +143,7 @@ const Button = styled.button`
   border-radius: 10px;
   padding: 10px 20px;
   margin-right: 5px;
+  cursor: pointer;
 
   @media screen and (max-width: 940px) {
     padding: 2px 10px;
