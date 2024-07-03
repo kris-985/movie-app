@@ -18,18 +18,16 @@ const Home = () => {
   return (
     <Fragment>
       <HomeCarousel />
-      <h1 className="popular-movie-title">TOP 9 POPULAR MOVIES</h1>
-      <div className="background-section">
+      <h1 className="popular-movie-title">TOP 18 POPULAR MOVIES</h1>
         <div className="movies-containers">
           <div className="movies-container">
             <div className="movie-container">
-              {movies.slice(0, 9).map((movie, id) => (
+              {movies.slice(0, 18).map((movie, id) => (
                 <Movie key={id} movie={movie} />
               ))}
             </div>
           </div>
         </div>
-      </div>
     </Fragment>
   );
 };

@@ -8,9 +8,7 @@ import Contacts from "./pages/Contacts";
 import Favourites from "./pages/Favourites";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
-import Account from "./components/Account";
 import { AuthContextProvider } from "./context/AuthContext";
-import Movies from "./pages/Movies";
 
 function App() {
   return (
@@ -21,9 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="signup" element={<SignUp />} />
             <Route path="login" element={<Login />} />
-            <Route path="account" element={<Account />} />
             <Route path="aboutus" element={<AboutUs />} />
-            <Route path="movies" element={<Movies />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="favourites" element={<Favourites />} />
           </Routes>

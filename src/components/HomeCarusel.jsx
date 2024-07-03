@@ -27,7 +27,7 @@ const HomeCarousel = () => {
       </CarouselContent>
       <CarouselContent>
         <CarouselImage
-          src="https://w0.peakpx.com/wallpaper/84/599/HD-wallpaper-avengers-endgame-with-high-resolution-pixel-avengers-endgame-online-movie.jpg"
+          src="https://wallpapercave.com/wp/wp2751453.jpg"
           alt=""
         />
       </CarouselContent>
@@ -39,13 +39,13 @@ const HomeCarousel = () => {
       </CarouselContent>
       <CarouselContent>
         <CarouselImage
-          src="https://www.desktopbackground.org/download/o/2014/01/08/698187_high-resolution-movie-the-amazing-spiderman-wallpapers-hd-18-full_1920x1080_h.jpg"
+          src="https://images7.alphacoders.com/614/thumb-1920-614832.jpg"
           alt=""
         />
       </CarouselContent>
       <CarouselContent>
         <CarouselImage
-          src="https://www.desktopbackground.org/download/o/2015/08/24/1000404_high-resolution-best-movie-the-avengers-wallpapers-hd-8-full-size_1600x1200_h.jpg"
+          src="https://c4.wallpaperflare.com/wallpaper/536/846/466/interstellar-movie-movies-wallpaper-preview.jpg"
           alt=""
         />
       </CarouselContent>
@@ -111,6 +111,7 @@ const CarouselImage = styled.img`
   height: auto;
   max-width: 1000px;
   max-height: 600px;
+  margin-top: 10px;
   background-size: cover;
   object-fit: cover;
   image-rendering: -webkit-optimize-contrast;
@@ -134,6 +135,6 @@ const CarouselImage = styled.img`
 
   @media (max-width: 480px) {
     max-width: 100%;
-    height: 200px;
+    height: 200px; 
   }
 `;
