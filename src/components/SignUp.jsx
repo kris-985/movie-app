@@ -25,7 +25,7 @@ const SignUp = () => {
       await signUp(values.email, values.password);
       Swal.fire({
         icon: "success",
-        title: "Successfully registered",
+        title: "The user is registered",
         showConfirmButton: false,
         timer: 2000,
       });

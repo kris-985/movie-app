@@ -22,7 +22,7 @@ const Movie = ({ movie }) => {
       });
       Swal.fire({
         icon: "success",
-        title: "The movie is added",
+        title: "The movie was added",
         showConfirmButton: false,
         timer: 2000,
       });
