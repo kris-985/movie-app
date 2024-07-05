@@ -62,7 +62,7 @@ const Favourites = () => {
     }
     Swal.fire({
       icon: "success",
-      title: "The movie is removed",
+      title: "The movie was removed",
       showConfirmButton: false,
       timer: 2000,
     });
