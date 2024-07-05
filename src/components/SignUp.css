@@ -35,7 +35,6 @@
   .signup-form label {
     color: #80395a;
     display: block;
-    font-weight: bold;
   }
   
   .signup-form input[type="text"],
@@ -60,7 +59,6 @@
   }
   
   .signup-form .paragraph {
-    font-weight: bold;
     margin-top: 15px;
     font-size: 16px;
   }

@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { UserAuth } from "../context/AuthContext";
 import styled from "styled-components";
 import { FaHeart } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Favourites = () => {
   const { user } = UserAuth();
@@ -59,6 +60,12 @@ const Favourites = () => {
       console.error("Error removing movie: ", error);
       setError(error.message);
     }
+    Swal.fire({
+      icon: "success",
+      title: "The movie is removed",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   return (
@@ -136,10 +143,9 @@ const Title = styled.div`
   left: 0;
   right: 0;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 20px;
-  font-weight: bold;
   text-align: center;
 
   @media (max-width: 1024px) {

@@ -7,21 +7,34 @@ import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { IoMdContact } from "react-icons/io";
 import { MdFavorite } from "react-icons/md";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { logOut } from "../../services/auth.services";
 import styled from "styled-components";
+import Swal from "sweetalert2";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [click, setClick] = useState(false);
   const { user } = UserAuth();
 
   const handleLogout = async () => {
     try {
       await logOut();
+      Swal.fire({
+        icon: "success",
+        title: "Logout successful",
+        showConfirmButton: false,
+        timer: 2000,
+      });
     } catch (error) {
       console.log(error);
     }
+    navigate("/");
+  };
+
+  const handleNavLinkClick = () => {
+    setClick(false);
   };
 
   return (
@@ -32,13 +45,13 @@ const NavBar = () => {
             <span>
               <GiFilmProjector />
             </span>
-            MOVIES
+            MOVIE APP
           </h1>
         </Logo>
         <div>
           <NavMenu className={click ? "nav-menu active" : "nav-menu"}>
             <NavItem>
-              <NavLink to="/">
+              <NavLink to="/" onClick={handleNavLinkClick}>
                 <span>
                   <AiFillHome />
                 </span>
@@ -46,7 +59,7 @@ const NavBar = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="aboutus">
+              <NavLink to="aboutus" onClick={handleNavLinkClick}>
                 <span>
                   <BsFillInfoCircleFill />
                 </span>
@@ -54,7 +67,7 @@ const NavBar = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="contacts">
+              <NavLink to="contacts" onClick={handleNavLinkClick}>
                 <span>
                   <IoMdContact />
                 </span>
@@ -62,7 +75,7 @@ const NavBar = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="favourites">
+              <NavLink to="favourites" onClick={handleNavLinkClick}>
                 <span>
                   <MdFavorite />
                 </span>
@@ -119,7 +132,6 @@ const Container = styled.div`
 
 const Logo = styled(Link)`
   font-size: 25px;
-  font-weight: bold;
   color: #80395a;
   text-decoration: none;
 

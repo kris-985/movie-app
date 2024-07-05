@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import { logIn } from "../services/auth.services";
 import styled from "styled-components";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,10 +14,16 @@ const Login = () => {
     e.preventDefault();
     try {
       await logIn(email, password);
-      navigate("/");
+      Swal.fire({
+        icon: "success",
+        title: "Logged in successfully",
+        showConfirmButton: false,
+        timer: 2000,
+      });
     } catch (error) {
       console.log(error);
     }
+    navigate("/");
   };
 
   return (
@@ -52,7 +59,7 @@ const Login = () => {
           </FormGroup>
           <Button type="submit">Login</Button>
           <Paragraph>
-            Create an account?{" "}
+            Create an account?
             <SignupLink to="/signup">
               SignUp
               <BsArrowRight />
@@ -77,15 +84,6 @@ const BackgroundSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 `;
 
 const LoginForm = styled.div`
@@ -115,7 +113,6 @@ const FormGroup = styled.div`
 const Label = styled.label`
   color: #80395a;
   display: block;
-  font-weight: bold;
   margin-bottom: 5px;
 `;
 
@@ -145,7 +142,6 @@ const Button = styled.button`
 `;
 
 const Paragraph = styled.p`
-  font-weight: bold;
   margin-top: 15px;
   font-size: 16px;
   text-align: left;
