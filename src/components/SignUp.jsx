@@ -7,30 +7,37 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import FormInput from "./FormInput";
 import { valuesInputs } from "../utils/helpers";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const navigate = useNavigate();
 
   const [values, setValues] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
-  const [errorMess, setErrorMess] = useState('');
+  const [errorMess, setErrorMess] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await signUp(values.email, values.password);
-      await setDoc(doc(db, 'users', values.email), {
+      Swal.fire({
+        icon: "success",
+        title: "Successfully registered",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+      await setDoc(doc(db, "users", values.email), {
         savedShows: [],
       });
-      navigate('/');
     } catch (error) {
       console.log(error);
-      if (error.message.includes('email-already-in-use')) {
-        setErrorMess('Email already in use');
+      if (error.message.includes("email-already-in-use")) {
+        setErrorMess("Email already in use");
       }
+      navigate("/");
     }
   };
 
@@ -61,7 +68,7 @@ const SignUp = () => {
           </button>
           <div>
             <p className="paragraph">
-              Already have an account?{' '}
+              Already have an account?{" "}
               <Link to="/login" className="links">
                 Login
                 <span>

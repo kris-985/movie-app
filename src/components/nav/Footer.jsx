@@ -32,7 +32,7 @@ const Footer = () => {
             <span>
               <GiFilmProjector />
             </span>
-            MOVIES
+            MOVIE APP
           </h1>
         </CenterSection>
         <RightSection>
@@ -89,7 +89,6 @@ const LeftSection = styled.div`
 
 const LeftSectionLink = styled(Link)`
   font-size: 25px;
-  font-weight: bold;
   text-decoration: none;
   color: #80395a;
 `;
@@ -118,7 +117,6 @@ const RightSection = styled.div`
     margin-bottom: 15px;
     margin-left: 10px;
     font-size: 25px;
-    font-weight: bold;
     color: #80395a;
   }
 
@@ -143,7 +141,6 @@ const FooterOne = styled.p`
   background-color: black;
   padding: 10px 20px;
   text-align: center;
-  font-weight: bold;
   color: #fff;
   font-size: 25px;
 
