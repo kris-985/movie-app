@@ -115,9 +115,6 @@ export default NavBar;
 
 const NavbarContainer = styled.div`
   width: 100%;
-  height: 90px;
-  top: 0;
-  left: 0;
   background-color: white;
   border-bottom: 5px solid #80395a;
 `;
@@ -128,6 +125,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  margin: 0 auto;
 `;
 
 const Logo = styled(Link)`
@@ -142,6 +140,7 @@ const Logo = styled(Link)`
 
 const ButtonGroup = styled.div`
   display: flex;
+  align-items: center;
 
   @media screen and (max-width: 940px) {
     justify-content: flex-start;
@@ -151,14 +150,15 @@ const ButtonGroup = styled.div`
 const Button = styled.button`
   background-color: #80395a;
   color: #fff;
-  font-size: 18px;
+  font-size: 25px;
   border-radius: 10px;
   padding: 10px 20px;
   margin-right: 5px;
   cursor: pointer;
+  border: none;
 
   @media screen and (max-width: 940px) {
-    padding: 2px 10px;
+    padding: 6px 12px;
   }
 `;
 
@@ -166,34 +166,52 @@ const NavMenu = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;
+  list-style: none;
 
   @media screen and (max-width: 940px) {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     align-items: center;
-    top: 70px;
-    right: -100%;
-    height: 100%;
+    top: 80px;
+    left: 0;
+    height: calc(100%);
     width: 100%;
     background: rgba(255, 255, 255, 0.98);
-    transition: 0.4s ease-in-out;
-    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 999;
 
     &.active {
-      right: 0;
+      transform: translateX(0);
     }
   }
 `;
 
 const NavItem = styled.li`
-  list-style-type: none;
   padding: 10px 10px;
   font-size: 25px;
+
+  @media screen and (max-width: 940px) {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const NavLink = styled(Link)`
   color: #80395a;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 5px;
+  }
+
+  @media screen and (max-width: 940px) {
+    justify-content: center;
+    font-size: 20px;
+  }
 `;
 
 const Hamburger = styled.div`
