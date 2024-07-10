@@ -48,45 +48,46 @@ const NavBar = () => {
             MOVIE APP
           </h1>
         </Logo>
-        <div>
-          <NavMenu className={click ? "nav-menu active" : "nav-menu"}>
-            <NavItem>
-              <NavLink to="/" onClick={handleNavLinkClick}>
-                <span>
-                  <AiFillHome />
-                </span>
-                HOME
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="aboutus" onClick={handleNavLinkClick}>
-                <span>
-                  <BsFillInfoCircleFill />
-                </span>
-                ABOUT US
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="contacts" onClick={handleNavLinkClick}>
-                <span>
-                  <IoMdContact />
-                </span>
-                CONTACTS
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="favourites" onClick={handleNavLinkClick}>
-                <span>
-                  <MdFavorite />
-                </span>
-                FAVOURITES
-              </NavLink>
-            </NavItem>
-          </NavMenu>
-          <Hamburger onClick={() => setClick(!click)}>
-            <Icon>{click ? <FaRegTimesCircle /> : <HiOutlineMenuAlt4 />}</Icon>
-          </Hamburger>
-        </div>
+        <NavMenu className={click ? "nav-menu active" : "nav-menu"}>
+          <CloseIcon onClick={() => setClick(!click)}>
+            <FaRegTimesCircle />
+          </CloseIcon>
+          <NavItem>
+            <NavLink to="/" onClick={handleNavLinkClick}>
+              <span>
+                <AiFillHome />
+              </span>
+              HOME
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="aboutus" onClick={handleNavLinkClick}>
+              <span>
+                <BsFillInfoCircleFill />
+              </span>
+              ABOUT US
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="contacts" onClick={handleNavLinkClick}>
+              <span>
+                <IoMdContact />
+              </span>
+              CONTACTS
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to="favourites" onClick={handleNavLinkClick}>
+              <span>
+                <MdFavorite />
+              </span>
+              FAVOURITES
+            </NavLink>
+          </NavItem>
+        </NavMenu>
+        <Hamburger onClick={() => setClick(!click)}>
+          <HiOutlineMenuAlt4 />
+        </Hamburger>
         <ButtonGroup>
           {user?.email ? (
             <div>
@@ -172,9 +173,10 @@ const NavMenu = styled.ul`
     position: fixed;
     flex-direction: column;
     align-items: center;
-    top: 80px;
+    justify-content: center;
+    top: 0;
     left: 0;
-    height: calc(100%);
+    height: 100%;
     width: 100%;
     background: rgba(255, 255, 255, 0.98);
     transition: transform 0.3s ease-in-out;
@@ -220,13 +222,22 @@ const Hamburger = styled.div`
 
   @media screen and (max-width: 940px) {
     display: block;
-  }
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;   
 `;
 
-const Icon = styled.div`
-  font-size: 24px;
+const CloseIcon = styled.div`
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1000;
 
   @media screen and (max-width: 940px) {
-    font-size: 32px;
+    display: block;
   }
 `;
